@@ -268,36 +268,36 @@ export default function App() {
 
               <motion.h2 
                 variants={fadeUp}
-                className="font-display text-[45px] sm:text-[60px] md:text-[75px] lg:text-[80px] xl:text-[70px] 2xl:text-[85px] font-[900] text-white leading-[1.05] tracking-tight mb-8"
+                className="font-display text-[45px] sm:text-[60px] md:text-[75px] lg:text-[85px] font-[900] text-white leading-[1.05] tracking-tighter mb-8"
               >
-                Savourez une Viande <br />
-                <span className="text-accent">Bio</span> & Délicieuse.
+                L'Excellence <br />
+                <span className="text-accent">Bouchère</span> Traditionnelle.
               </motion.h2>
               
               <motion.p 
                 variants={fadeUp}
-                className="text-[16px] md:text-[18px] text-white/80 font-medium mb-10 md:mb-12 max-w-[520px] leading-relaxed"
+                className="text-[16px] md:text-[18px] text-white/90 font-medium mb-10 md:mb-12 max-w-[540px] leading-relaxed"
               >
-                Découvrez la passion du métier d'artisan boucher au cœur de Longjumeau. Explorez nos sélections premium pour des moments inoubliables.
+                Découvrez au cœur de Longjumeau une sélection premium de viandes maturées, de volailles bio et de produits artisanaux. Le goût authentique, sans compromis.
               </motion.p>
               
               <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6 mb-12 lg:mb-16">
                 <a 
                   href="#boutique" 
-                  className="group relative inline-flex items-center justify-center bg-accent text-white px-10 py-[18px] font-display font-bold text-[14px] uppercase tracking-[0.1em] overflow-hidden w-full sm:w-auto shadow-xl shadow-accent/20 rounded-full"
+                  className="group relative inline-flex items-center justify-center bg-accent text-white px-10 py-[18px] font-display font-bold text-[14px] uppercase tracking-[0.1em] overflow-hidden w-full sm:w-auto shadow-[0_10px_30px_rgba(224,60,49,0.3)] hover:shadow-[0_15px_40px_rgba(224,60,49,0.4)] transition-shadow rounded-full"
                 >
                   <span className="absolute inset-0 bg-black/10 transform translate-y-full transition-transform duration-300 ease-out group-hover:translate-y-0"></span>
                   <span className="relative z-10 flex items-center gap-2">
                     Commander en Ligne
-                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight size={18} className="group-hover:translate-x-1.5 transition-transform" />
                   </span>
                 </a>
                 
                 <a href="#contact" className="flex items-center justify-center gap-4 text-white font-display font-bold text-[14px] uppercase tracking-[0.1em] hover:text-accent transition-colors group w-full sm:w-auto py-3">
-                  <span className="w-[56px] h-[56px] rounded-full border border-white/20 group-hover:border-accent group-hover:bg-accent/10 flex items-center justify-center bg-white/5 backdrop-blur-sm transition-all duration-300 shrink-0">
+                  <span className="w-[56px] h-[56px] rounded-full border border-white/30 group-hover:border-accent group-hover:bg-accent/10 flex items-center justify-center bg-white/10 backdrop-blur-md transition-all duration-300 shrink-0 shadow-lg">
                     <MapPin size={18} className="group-hover:scale-110 transition-transform" />
                   </span>
-                  Voir La Localisation
+                  Notre Adresse
                 </a>
               </motion.div>
             </motion.div>
@@ -447,11 +447,11 @@ export default function App() {
                 </motion.ul>
 
                 <motion.div variants={fadeUp}>
-                  <a href="#shop" className="group relative inline-flex items-center justify-center bg-accent text-white px-10 py-[18px] font-display font-bold text-[14px] uppercase tracking-[0.1em] overflow-hidden shadow-xl shadow-accent/20 rounded-full">
+                  <a href="#shop" className="group relative inline-flex items-center justify-center bg-accent text-white px-10 py-[18px] font-display font-bold text-[14px] uppercase tracking-[0.1em] overflow-hidden rounded-full shadow-[0_10px_30px_rgba(224,60,49,0.3)] hover:shadow-[0_15px_40px_rgba(224,60,49,0.4)] transition-shadow">
                     <span className="absolute inset-0 bg-black/10 transform translate-x-[100%] transition-transform duration-300 ease-out group-hover:translate-x-0"></span>
                     <span className="relative z-10 flex items-center gap-2">
                       Découvrir Nos Produits
-                      <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight size={18} className="group-hover:translate-x-1.5 transition-transform" />
                     </span>
                   </a>
                 </motion.div>
@@ -510,9 +510,9 @@ export default function App() {
                   <motion.div 
                     key={idx} 
                     variants={fadeUp}
-                    className="bg-white p-5 lg:p-6 shadow-[0_2px_15px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-300 group rounded-sm flex flex-col"
+                    className="bg-white p-5 lg:p-6 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.12)] transition-all duration-300 group rounded-2xl flex flex-col border border-gray-50"
                   >
-                     <div className="relative h-[240px] xl:h-[280px] overflow-hidden mb-6 -mx-2 bg-gray-100 rounded-sm">
+                     <div className="relative h-[240px] xl:h-[280px] overflow-hidden mb-6 -mx-2 bg-gray-100 rounded-xl">
                         <img 
                           src={item.img} 
                           alt={item.title} 
@@ -526,9 +526,9 @@ export default function App() {
                            </div>
                         )}
                         {/* Hover Overlay Action */}
-                         <div className="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                           <button className="bg-white text-primary rounded-full p-4 hover:bg-accent hover:text-white transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300">
-                              <Search size={20} />
+                         <div className="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
+                           <button className="bg-white text-primary rounded-full p-4 hover:bg-accent hover:text-white transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-xl">
+                              <ShoppingCart size={20} className="ml-[-2px]" />
                            </button>
                          </div>
                      </div>
@@ -540,13 +540,13 @@ export default function App() {
                        <div className="flex text-[#FFB800] mb-3">
                           {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
                        </div>
-                       <span className="font-bold text-[17px] text-text-muted mt-auto">
+                       <span className="font-bold text-[20px] text-accent mt-auto">
                          {item.price}
                        </span>
                        
                        <div className="flex items-center justify-between border-t border-gray-100 mt-5 pt-5 relative overflow-hidden">
-                         <button className="text-[13px] font-bold font-display uppercase tracking-[0.05em] text-primary group-hover:text-accent transition-colors flex items-center gap-2">
-                           <ShoppingCart size={16} /> Ajouter
+                         <button className="text-[13px] font-bold font-display uppercase tracking-[0.05em] text-primary/70 group-hover:text-primary transition-colors flex items-center gap-2">
+                           En savoir plus <ArrowRight size={14} />
                          </button>
                          <button aria-label="Favoris" className="text-gray-300 hover:text-accent transition-colors">
                            <Heart size={18} />
@@ -869,9 +869,9 @@ export default function App() {
                     href="https://maps.google.com/?q=12+Rue+de+la+Ferme,+91160+Longjumeau,+France" 
                     target="_blank" 
                     rel="noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-4 font-display font-bold text-[14px] uppercase tracking-[0.1em] rounded-full shadow-xl hover:bg-accent transition-colors"
+                    className="w-full inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-4 font-display font-bold text-[14px] uppercase tracking-[0.1em] rounded-full shadow-[0_10px_30px_rgba(10,15,26,0.3)] hover:bg-accent hover:shadow-[0_10px_30px_rgba(224,60,49,0.3)] transition-all"
                   >
-                    Ouvrir dans Google Maps <ArrowRight size={16} />
+                    Ouvrir dans Google Maps <ArrowRight size={16} className="ml-1" />
                   </a>
                 </motion.div>
                 
