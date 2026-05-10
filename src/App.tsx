@@ -5,7 +5,7 @@ import { twMerge } from "tailwind-merge";
 import {
   Search, User, ShoppingCart, Facebook, Twitter, Linkedin, Instagram,
   MapPin, Mail, Phone, ChevronDown, Play, Heart, ArrowRight, ArrowLeft,
-  Star, Menu, X, CheckCircle2, ShieldCheck, Clock
+  Star, Menu, X, CheckCircle2, ShieldCheck, Clock, Beef
 } from "lucide-react";
 
 /** Utility for Tailwind class merging */
@@ -95,16 +95,14 @@ export default function App() {
           
           {/* Brand Logo */}
           <a href="#" className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 rounded-lg" aria-label="Accueil La Ferme">
-            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-accent text-white shadow-lg shadow-accent/20 group-hover:scale-105 transition-transform duration-300">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-              </svg>
+            <div className="w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] flex items-center justify-center rounded-lg bg-primary text-white shadow-lg shadow-primary/20 group-hover:bg-accent group-hover:-rotate-[-10deg] transition-all duration-300">
+              <Beef size={28} strokeWidth={2} className="relative z-10" />
             </div>
-            <div className="flex flex-col">
-              <h1 className="font-display font-[900] text-[24px] tracking-tight text-primary uppercase leading-none">
-                La Ferme
+            <div className="flex flex-col ml-1">
+              <h1 className="font-display font-[900] text-[20px] sm:text-[24px] tracking-tight text-primary uppercase leading-none m-0 p-0">
+                LA FERME<span className="text-accent text-[28px] leading-[0]">.</span>
               </h1>
-              <span className="text-[10px] uppercase font-bold text-accent tracking-[0.2em] mt-0.5">De Longjumeau</span>
+              <span className="text-[9px] sm:text-[10px] font-bold tracking-[0.25em] uppercase text-text-muted mt-0.5">De Longjumeau</span>
             </div>
           </a>
 
